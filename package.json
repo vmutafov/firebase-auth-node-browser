@@ -1,6 +1,6 @@
 {
   "name": "@vmutafov/firebase-auth-node-browser",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Extension for Firebase Auth allowing signing in in from a browser",
   "keywords": [
     "Firebase",
