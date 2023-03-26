@@ -1,0 +1,16 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.mjs"
+  },
+  "dependencies": {
+    "firebase": "^9.17.2",
+    "@vmutafov/firebase-auth-node-browser": "file:../../."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,63 @@
+{
+  "name": "@vmutafov/firebase-auth-node-browser",
+  "version": "0.0.0",
+  "description": "Extension for Firebase Auth allowing signing in in from a browser",
+  "keywords": [
+    "Firebase",
+    "Auth",
+    "Browser login",
+    "NodeJS"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup-node src/index.ts",
+    "watch": "npm run build -- --watch src",
+    "prepublishOnly": "npm run build",
+    "test": ""
+  },
+  "devDependencies": {
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2"
+  },
+  "peerDependencies": {
+    "firebase": "^9.17.2",
+    "open": "^9.1.0",
+    "http-terminator": "^3.2.0"
+  },
+  "author": "Vladimir Mutafov",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vmutafov/firebase-auth-node-browser.git"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "tsup": {
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "dts": {
+      "resolve": true,
+      "entry": [
+        "./src/index.ts"
+      ],
+      "compilerOptions": {
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true
+      }
+    },
+    "clean": true
+  }
+}
